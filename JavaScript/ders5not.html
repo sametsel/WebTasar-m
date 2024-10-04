@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <style>
+
+    </style>
+    <div id="addDiv">
+        work <input id="work" type="text" autocomplete="off">
+        <button onclick="kyt()">save</button>
+    </div>
+    <div style="display: none;" id="uptadeDiv">
+        update work <input id="uptadework" type="text" autocomplete="off">
+        <button onclick="uptade()">save</button>
+    </div>
+
+
+    <div>
+
+        <ol style=" width: 50%; height: auto; ">
+
+        </ol>
+
+    </div>
+
+    <script>
+        let id = 0;
+        let updateid = 0;
+        function kyt() {
+            const el = document.getElementById("work");
+            const value = el.value;
+
+            const olel = document.querySelector("ol");
+            olel.innerHTML += `<li id="${id}">${value} 
+          <button class="uptade" onclick="get('${id}')" >Güncelle</button>
+          <button class="remote" onclick="remove('${id}');">Sil</button>
+          </li>`//kısayol1    
+            //olel.innerHTML +="<li|"+value+"</li>";//kısayol2
+
+            //const liel =document.createElement("li"); //uzun yol
+            //liel.innerText = el.value;                //uzun yol   
+            //olel.appendChild(liel);                   //uzun yol
+
+            el.value = "";//butona tıkladıktan sonra boşalır!!
+            el.focus();//her tuşa bastıktan sonra inputa focus atar seçer
+            id++;
+        }
+    </script>
+    <script>//silme metodu için fonsiyon
+        function remove(id) {
+            const el = document.getElementById(id);
+            el.remove();
+        }
+    </script>
+    <script>
+        function get(id) {
+            const addDiv = document.getElementById("addDiv")
+            addDiv.style.display = "none"
+            const uptadediv = document.getElementById("uptadeDiv");
+            uptadediv.style.display = "block"
+            const updateBtnEls = document.querySelectorAll(".update");
+            for(let index in updateBtnEls){                
+                if(index == "entries") break;
+                    updateBtnEls[index].style.display = "none";
+            }
+
+            const deleteBtnEls = document.querySelectorAll(".delete")
+            for(let index in deleteBtnEls){
+                if(index == "entries") break;
+                deleteBtnEls[index].style.display = "none";
+            }
+            const el = document.getElementById(id);
+            let value = el.innerText;
+            value = value.replace("Güncelle Sil", "");
+            const el1 = document.getElementById("uptadework");
+            el1.value = value;
+            
+
+
+            updateid = id;
+
+        }
+
+    </script>
+    <script> //uptade
+        function uptade() {
+            const el = document.getElementById(updateid);
+            const inputel = document.getElementById("uptadework")
+            el.innerHTML = `${inputel.value} 
+          <button class="uptade" onclick="get('${updateid}')" >Güncelle</button>
+          <button class="remote" onclick="remove('${updateid}');">Sil</button>
+          `
+            const addDiv = document.getElementById("addDiv")
+            addDiv.style.display = "block"
+            const uptadediv = document.getElementById("uptadeDiv");
+            uptadediv.style.display = "none"
+            const updateBtnEls = document.querySelectorAll(".update");
+            for(let index in updateBtnEls){                
+                if(index == "entries") break;
+                    updateBtnEls[index].style.display = "inline";
+            }
+
+            const deleteBtnEls = document.querySelectorAll(".delete")
+            for(let index in deleteBtnEls){
+                if(index == "entries") break;
+                deleteBtnEls[index].style.display = "inline";
+            }
+        
+        }
+    </script>
+    
+</body>
+
+</html>

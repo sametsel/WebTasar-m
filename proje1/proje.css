@@ -1,0 +1,78 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images\ \(1\).jpeg);
+    background-repeat:no-repeat;
+    background-size: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+
+    box-shadow: 25px 25px 100px ;
+    border-radius: 10px;
+    background-color: rgb(52, 41, 41);
+    margin:  auto ;
+    margin-top: 100px;
+    width: 700px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    
+}
+.sol{
+    width: 275px;
+    height: 450px;
+}
+.sağ{
+    width: 275px;
+    height: 450px;
+}
+form{
+    margin-left: 130px;
+    text-align: center;
+    margin-top: 60px;
+    width: 275px;
+    height: 450px;
+}
+.input-kutu input {
+    box-shadow: 20px 10px 60px ;
+    width: 80%;
+    border-radius: 20px;
+    background-color: azure;
+    padding: 8px;
+    margin-top: 20px;
+    /* outline:none; soru sor!! */
+}
+.button{
+    height: 7%;
+    margin-top: 15px;
+    width: 80%;
+    border-radius: 20px;
+    background: linear-gradient(32deg,rgb(24, 24, 24),rgb(152, 174, 174),rgb(153, 162, 169),black);
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0;
+}
+h1{
+    letter-spacing: 0.35rem;
+    display: inline;
+    color:azure;
+    text-shadow: -1px 0 azure, 0 1px azure, 1px 0 azure, 0 -1px azure;
+
+    
+}
+img{
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+
+}
+a {
+    
+    color: #696969;
+    font-weight: bolder;
+}
+

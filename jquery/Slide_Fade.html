@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <p>Sıfırdan İleri Düzey Web Geliştirme</p>
+        <img src="images (1).jpeg" width="200">
+    </div>
+    <br>
+    <button id="FadeId">FadeIn</button>
+    <button id="FadeOut">FadeOut</button>
+    <button id="FadeTo">FadeTo</button>
+    <button id="FadeToggle">FadeToogle</button>
+    <br><br>
+    <button id="SlideDown">SlideDown</button>
+    <button id="SlideUp">SlideUp</button>
+    <button id="SlideToggle">SlideToggle</button>
+    
+    <script>
+     $(document).ready(function(){
+        $("#FadeId").click(function(){
+           $("div").fadeIn(2000); 
+        });
+        $("#FadeOut").click(function(){
+            $("div").fadeOut(2000);
+        });
+        $("#FadeTo").click(function(){
+            $("div").fadeTo("slow",0.5 );
+        });
+        $("#FadeToggle").click(function(){
+            $("div").fadeToggle(2000);
+        });
+        $("#SlideDown").click(function(){
+            $("div").slideDown(2000);
+        });
+        $("#SlideUp").click(function(){
+            $("div").slideUp(2000);
+        });
+        $("#SlideToggle").click(function(){
+            $("div").slideToggle(2000);
+        });
+     }); 
+    </script>
+</body>
+
+</html>

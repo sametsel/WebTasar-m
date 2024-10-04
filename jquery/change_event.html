@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+    <style>
+       
+    </style>
+
+</head>
+<body>
+    <form >
+        <p>
+            Ad: <input class="control" type="text">
+        </p>
+
+        <p>
+            Öğrenim durumu : <select class="control">
+                <option value="İlkokul" >İlkokul</option>
+                <option value="Ortaokul" >Ortaokul</option>
+                <option value="Lise">Lise</option>
+                <option value="Üniversite">Üniversite</option>
+
+
+            </select>
+        </p>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $(".control").change(function(){
+                console.log($(this).val())
+            });
+        });
+    </script>
+</body>
+</html>

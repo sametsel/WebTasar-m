@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+    <style>
+       
+        .paragarafrenkdegistir{
+            color: orange;
+            font-size: 22px;
+        }
+    </style>
+
+</head>
+<body>
+   <p id="p1">sıfırden ileri düzey wp geliştirme</p>
+   <p id="p2">sıfırden ileri düzey wp geliştirme</p>
+   <p class="paragraf">sıfırden ileri düzey wp geliştirme</p>
+   <p class="paragraf">sıfırden ileri düzey wp geliştirme</p>
+    
+    <script>
+        $(document).ready(function(){
+            $("#p1").click(function(){
+            $(this).addClass("paragarafrenkdegistir");
+        //this yapmazsak aynı idden birtane daha olursa onuda çalıştırır tıklananı değiştirmesi için this kullanıyoruz   
+        })
+        })
+
+    </script>
+</body>
+</html>

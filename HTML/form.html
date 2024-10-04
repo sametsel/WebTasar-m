@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Form Elementi</title>
+</head>
+<body>
+<h1>İletişim Formu</h1>    
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/481px-Cat03.jpg" alt="" width="200">
+<form autocomplete="on">
+    <div>
+    <label for="firstname">First Name</label>
+    <input type="text" required minlength="3" maxlength="6" id="firstname">
+</div>
+<div>   
+    <label for="lastname">Last Name</label>
+    <input type="text" required minlength="5" maxlength="8" id="lastname">
+</div>
+<div>
+    <label for="email">Email</label>
+    <input type="email" required id="email">
+</div>
+<div>
+    <input type="file" multiple>
+</div>
+<div>
+    <input type="checkbox" id="remmemberMe">
+    <label for="remmemberMe">Beni Hatırla </label>
+</div>
+<div>
+ <button type="submit" disabled>Send</button>
+</div>
+</form>
+
+</body>
+</html>

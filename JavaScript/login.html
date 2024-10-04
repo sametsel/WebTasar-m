@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <h1>Login Page</h1>
+    <div>
+        Username
+        <input type="text" id="userName">
+    </div>
+    <div>
+        Password
+        <input type="text" id="password">
+    </div>
+    <div>
+        <button id="signInBtn">Sign In</button>
+    </div>
+
+    <script>
+        const el = document.getElementById("signInBtn");
+        el.addEventListener("click",()=> {
+            const userNameEl = document.getElementById("userName");
+            const passwordEl = document.getElementById("password");
+
+            console.log(`UserName: ${userNameEl.value}\n Password: ${passwordEl.value}`);
+
+
+
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
